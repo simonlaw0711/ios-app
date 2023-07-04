@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52E7B58B2A5488F800E930F9 /* TelegramAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7B58A2A5488F800E930F9 /* TelegramAuthViewController.swift */; };
 		820079F42407D96D00EC2062 /* ConnectionInfoBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820079F32407D96D00EC2062 /* ConnectionInfoBoxView.swift */; };
 		8201A5022354A32F008C83DB /* ErrorResultSessionNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8201A5012354A32F008C83DB /* ErrorResultSessionNew.swift */; };
 		8201A5042356536B008C83DB /* UpgradePlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8201A5032356536B008C83DB /* UpgradePlanViewController.swift */; };
@@ -415,6 +416,7 @@
 
 /* Begin PBXFileReference section */
 		042B1F5A4F38CCA3591AD441 /* Pods_openvpn_tunnel_provider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_openvpn_tunnel_provider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E7B58A2A5488F800E930F9 /* TelegramAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramAuthViewController.swift; sourceTree = "<group>"; };
 		58126B967EB9B059871FD7AB /* Pods_wireguard_tunnel_provider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wireguard_tunnel_provider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		751AB84B8432BC3E6BEDD483 /* Pods_today_extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_today_extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		820079F32407D96D00EC2062 /* ConnectionInfoBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionInfoBoxView.swift; sourceTree = "<group>"; };
@@ -781,6 +783,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52E7B5892A5488E100E930F9 /* TelegramAuth */ = {
+			isa = PBXGroup;
+			children = (
+				52E7B58A2A5488F800E930F9 /* TelegramAuthViewController.swift */,
+			);
+			path = TelegramAuth;
+			sourceTree = "<group>";
+		};
 		584496306C3B9383149618CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1144,6 +1154,7 @@
 		82A208B321BAA4C500C9AD44 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				52E7B5892A5488E100E930F9 /* TelegramAuth */,
 				8243584B25DAA81D005FDEBB /* SecureDNS */,
 				8208525423FD56530008C112 /* MainScreen */,
 				822563902431DFFB00AE7F8D /* AccountScreen */,
@@ -2109,6 +2120,7 @@
 				82E7168A2181E8E900D6B7C2 /* WireGuardProtocol.swift in Sources */,
 				828E9C95231E5780001E1FCF /* Data+Ext.swift in Sources */,
 				9C51340A1DE8398400423551 /* Pinger.swift in Sources */,
+				52E7B58B2A5488F800E930F9 /* TelegramAuthViewController.swift in Sources */,
 				8223C54E22EAE93F00CD283D /* SessionManager.swift in Sources */,
 				8292E1A72174C10700123538 /* Peer.swift in Sources */,
 				820EA86E232264EC00E16B2D /* SuccessResult.swift in Sources */,

@@ -49,6 +49,7 @@ class LoginViewController: UIViewController {
         return sessionManager
     }()
     
+    private var telegramLoginButton: UIButton!
     private var loginProcessStarted = false
     private let hud = JGProgressHUD(style: .dark)
     private var actionType: ActionType = .login
@@ -126,6 +127,18 @@ class LoginViewController: UIViewController {
         
         addObservers()
         hideKeyboardOnTap()
+        // Create a new UIButton
+        telegramLoginButton = UIButton(type: .system)
+        telegramLoginButton.setTitle("Log in with Telegram", for: .normal)
+        telegramLoginButton.addTarget(self, action: #selector(telegramLoginTapped), for: .touchUpInside)
+        
+        // Add the button to your view
+        view.addSubview(telegramLoginButton)
+        
+        // Setup constraints (this is just an example, adjust to fit your layout)
+        telegramLoginButton.translatesAutoresizingMaskIntoConstraints = false
+        telegramLoginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        telegramLoginButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -252,6 +265,13 @@ class LoginViewController: UIViewController {
 // MARK: - SessionManagerDelegate -
 
 extension LoginViewController {
+
+    @objc func telegramLoginTapped() {
+        // Here you would initiate the Telegram login process
+        let telegramAuthVC = TelegramAuthViewController()
+        // Present TelegramAuthViewController or push it in a navigation stack
+        self.navigationController?.pushViewController(telegramAuthVC, animated: true)
+    }
     
     override func createSessionStart() {
         hud.indicatorView = JGProgressHUDIndeterminateIndicatorView()
